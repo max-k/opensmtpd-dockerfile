@@ -2,7 +2,7 @@ FROM alpine:latest
 
 MAINTAINER Thomas Sarboni <max-k@post.com>
 
-RUN apk update && apk add opensmtpd
+RUN apk --update-cache --no-cache add opensmtpd
 
 COPY smtpd.conf /etc/smtpd/smtpd.conf
 
